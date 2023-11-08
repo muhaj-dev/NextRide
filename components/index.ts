@@ -1,16 +1,23 @@
 import Card from "./Card";
 import CustomButton from "./CustomButton";
-// import CustomFilter from "./CustomFilter";
+import Brands from "./Brands";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
-// import ShowMore from "./ShowMore";
-// import SearchBar from "./Searchbar";
+import CardHow from "./CardHow";
 import Hero from "./Hero";
+import CarCard from "./CarCard"
+import WhyChoose from "./WhyChoose";
+import Testimonials from "./Testimonials";
 
 export {
   Hero,
   Footer,
   NavBar,
   Card,
-  CustomButton
+  CarCard,
+  CustomButton,
+  Brands,
+  CardHow,
+  WhyChoose,
+  Testimonials
 };

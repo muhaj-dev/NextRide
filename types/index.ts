@@ -8,3 +8,11 @@ export interface CustomButtonProps {
     rightIcon?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
   }
+
+
+  export interface CarCardProps {
+    imageUrl: string;
+    title: string;
+    rating: number;
+    pricePerDay: number;
+  }

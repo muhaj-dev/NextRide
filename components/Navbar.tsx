@@ -15,10 +15,10 @@ const Navbar = () => {
       <nav className="max-width flex justify-between gap-64 items-center sm:px-16 px-6 py-4 bg-transparent">
         <Link href="/" className="flex justify-center items-center">
           <Image
-            src="/logo.svg"
+            src="/logo1.svg"
             alt="logo"
             width={118}
-            height={18}
+            height={118}
             className="object-contain"
           />
         </Link>

@@ -16,7 +16,22 @@ const Hero = () => {
         <p className="hero__subtitle">
            Streamline your car rental experience with our effortless booking process.
         </p>
-
+        <div className="flex justify-start items-center gap-5 mt-2">
+                 <Image
+                      src="/App Store.png"
+                      alt="logo"
+                      width={130}
+                      height={44}
+                      className="object-contain "
+                    />
+                    <Image
+                      src="/Google Play.png"
+                      alt="logo"
+                      width={130}
+                      height={44}
+                      className="object-contain"
+                    />
+                 </div>
       </div>
       <div className="hero__image-container">
         <div className="hero__image">
