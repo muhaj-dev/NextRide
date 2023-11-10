@@ -13,6 +13,6 @@ export interface CustomButtonProps {
   export interface CarCardProps {
     imageUrl: string;
     title: string;
-    rating: number;
+    year: number;
     pricePerDay: number;
   }

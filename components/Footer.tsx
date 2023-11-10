@@ -3,8 +3,15 @@ import Link from "next/link";
 
 import { footerLinks } from "../constants";
 
-const Footer = () => (
-  <footer className='bg-[#1E242D] flex flex-col text-white  mt-5 border-t border-gray-100 relative'>
+const Footer = () => {
+  const
+ currentDate = 
+new
+ 
+Date
+();
+  return (
+    <footer className='bg-[#1E242D] flex flex-col text-white  mt-5 border-t border-gray-100 relative'>
     <div className="bg-primary-blue w-[80%] md:w-[1160px]  h-[300px] mx-auto flex justify-between items-center rounded-2xl p-10 absolute left-0 right-0 -top-20 ">
                 <div className="">
                  <h1 className='text-white 2xl:text-[40px] sm:text-[36px] text-[20px] font-extrabold'>Download Nextride<br/> App for free</h1>
@@ -40,7 +47,7 @@ const Footer = () => (
       <div className='flex flex-col justify-start items-start gap-6'>
         <Image src='/logo.svg' alt='logo' width={118} height={18} className='object-contain' />
         <p className='text-base text-white'>
-          Carhub 2023 <br />
+          Nextride {currentDate.getFullYear()} <br />
           All Rights Reserved &copy;
         </p>
       </div>
@@ -78,6 +85,7 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
+  )
+};
 
 export default Footer;

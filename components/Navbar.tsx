@@ -59,39 +59,33 @@ const Navbar = () => {
             isMobileMenuOpen ? 'block' : 'hidden'
           } md:hidden flex justify-center items-center flex-col space-y-4 bg-blue-500 p-4 absolute top-16 left-0 w-full`}
         >
-          <Link href="/" className="text-white hover:text-gray-800">
-            Become a renter
+          <Link href="/" className="text-white hover:text-gray-800 font-bold">
+          Home
           </Link>
-          <Link href="/" className="text-white hover:text-gray-800">
-            Rental deals
+          <Link href="/" className="text-white hover:text-gray-800 font-bold">
+          About Us
           </Link>
-          <Link href="/" className="text-white hover:text-gray-800">
-            How it works
+          <Link href="/" className="text-white hover:text-gray-800 font-bold">
+          Our Services
           </Link>
-          <Link href="/" className="text-white hover:text-gray-800">
-            Why choose us
-          </Link>
-          <Link href="/" className="text-white hover:text-gray-800">
-            Login
+          <Link href="/" className="text-white hover:text-gray-800 font-bold">
+          Contact Us
           </Link>
         </div>
 
         {/* Desktop menu */}
         <div className="hidden md:flex mr-80 space-x-4">
-          <Link href="/" className="text-gray-600 hover:text-gray-800">
-            Become a renter
+        <Link href="/" className="text-primary-blue hover:text-grey font-bold">
+          Home
           </Link>
-          <Link href="/" className="text-gray-600 hover:text-gray-800">
-            Rental deals
+          <Link href="/" className="text-primary-blue hover:text-grey font-bold">
+          About Us
           </Link>
-          <Link href="/" className="text-gray-600 hover:text-gray-800">
-            How it works
+          <Link href="/" className="text-primary-blue hover:text-grey font-bold">
+          Our Services
           </Link>
-          <Link href="/" className="text-gray-600 hover:text-gray-800">
-            Why choose us
-          </Link>
-          <Link href="/" className="text-gray-600 hover:text-gray-800">
-            Login
+          <Link href="/" className="text-primary-blue hover:text-grey font-bold">
+          Contact Us
           </Link>
         </div>
       </nav>

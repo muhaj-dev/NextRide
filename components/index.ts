@@ -8,6 +8,8 @@ import Hero from "./Hero";
 import CarCard from "./CarCard"
 import WhyChoose from "./WhyChoose";
 import Testimonials from "./Testimonials";
+import  ServiceCard from "./ServiceCard";
+// import  FAQ from "./FAQ";
 
 export {
   Hero,
@@ -19,5 +21,7 @@ export {
   Brands,
   CardHow,
   WhyChoose,
-  Testimonials
+  Testimonials,
+  ServiceCard,
+  // FAQ
 };
