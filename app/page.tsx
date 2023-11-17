@@ -2,6 +2,7 @@ import { Brands, CarCard, Card, CardHow, CustomButton, Hero, Testimonials, WhyCh
 import Image from 'next/image'
 import Head from 'next/head';
 import {BsArrowRight } from  "react-icons/bs"
+import Link from 'next/link';
 export default function Home() {
   const testimonials = [
     {
@@ -28,31 +29,35 @@ export default function Home() {
   ];
   return (
     <>
-     <Head>
+     {/* <Head children={undefined}>
        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet"/>
        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> 
-     </Head>
+     </Head> */}
      <main className='overflow-hidden'>
            <Hero />
            <div className="flex-center">
              <Card /> 
            </div>
            {/* <Brands /> */}
-           <div className="flex justify-center items-center flex-col gap-4">
+           <div className="mx-auto ">
+            <div className='flex justify-center items-center flex-col gap-4 my-20'>
               <p className='text-[16px] text-black font-light mt-5'>HOW IT WORK</p>
-              <h1 className='block md:hidden 2xl:text-[29px] sm:text-[22px] text-[20px] font-extrabold text-center'>Hire with following 3<br/> working steps</h1>
-              <h1 className='hidden md:block 2xl:text-[29px] sm:text-[22px] text-[20px] font-extrabold text-center'>Hire with following 3 working steps</h1>
-              <div className=" flex flex-col md:flex-row justify-between items-center gap-10 mt-5">
+              <h1 className='block md:hidden 2xl:text-[29px] sm:text-[22px] text-[20px] font-extrabold text-center'>HOW IT WORK</h1>
+              <h1 className='hidden md:block 2xl:text-[29px] sm:text-[22px] text-[20px] font-extrabold text-center mb-10'>Rent with following 3 working steps</h1>
+
+              <div className="max-width flex flex-wrap flex-row justify-center items-center gap-10 mt-5">
                  <CardHow backgroundColor="#FFFF"  icon="/location.png" title='Choose location' description='Choose your location and find your best car.' />
-                 <CardHow backgroundColor='#3083FF' icon="/calendar-tick.png" title='Pick-up date' description='Select your pick up date and time to book your car.'/>
+                 <CardHow backgroundColor='radial-gradient(115.89% 115.89% at 49.61% 115.89%, #3083FF 0%, #87B5FB 100%)' icon="/calendar-tick.png" title='Pick-up date' description='Select your pick up date and time to book your car.'/>
                  <CardHow backgroundColor="#FFFF" icon="/car.png" title='Book your car' description='Book your car and we will deliver it directly to you.'/>
               </div>
+
+            </div>
               <WhyChoose />
-              <div className="flex justify-center items-center flex-col">
+              <div className="flex justify-center items-center flex-col max-width my-20">
               <p className='text-[16px] text-black font-light mt-5'>Popular hire deals</p>
               <h1 className='block md:hidden 2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold text-center'>Most popular vehicle <br/>hire deals</h1>
-              <h1 className='hidden md:block 2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold'>Most popular vehicle hire deals</h1>
-                <div className="max-width flex flex-wrap justify-center  items-center  gap-5 mt-10">
+              <h1 className='hidden md:block 2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold mb-4'>Most popular vehicle hire deals</h1>
+                <div className=" flex flex-wrap justify-center  items-center  gap-5 mt-10">
                 <CarCard imageUrl='/Red Mazda Car - 1180x664 1.png' title='Red Mazda 6 - Elite Estate' year={2013} pricePerDay={4000} />
                 <CarCard imageUrl='/Red Mazda Car - 1180x664 1.png' title='Red Mazda 6 - Elite Estate' year={2014} pricePerDay={4000} />
                 <CarCard imageUrl='/Red Mazda Car - 1180x664 1.png' title='Red Mazda 6 - Elite Estate' year={2019} pricePerDay={4000} />
@@ -68,19 +73,25 @@ export default function Home() {
                   <BsArrowRight />
                 </div> 
               </div>
-              <div className="flex justify-center items-center flex-col mb-64">
-              <p className='text-[16px] text-black font-light mt-5'>Testimonials</p>
-              <h1 className='2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold'>What people say about us?</h1>
-                <div className="flex flex-wrap gap-5 mt-5">
-                {/* {testimonials.map((testimonial, index) => (
-                  <Testimonials key={index} {...testimonial} />
-                ))} */}
+              <div className=" bg-ash py-20">
+                <div className='max-width  flex justify-center items-center flex-col mb-64'>
+                  <p className='text-[16px] text-black font-light mt-5'>Testimonials</p>
+                  <h1 className='2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold'>What people say about us?</h1>
+                    <div className="flex flex-wrap gap-5 mt-5">
+                    {/* {testimonials.map((testimonial, index) => (
+                      <Testimonials key={index} {...testimonial} />
+                    ))} */}
+
+                </div>
                 </div>
               </div>
-              <div className="p-4">
-              <h1 className="text-2xl font-bold">Frequently Asked Questions</h1>
-              {/* <FAQ faqs={faqs} /> */}
-            </div>
+              <div className="py-20">
+                <div className="max-width  flex justify-center items-center flex-col mb-64">
+                <h1 className="text-2xl font-bold">Frequently Asked Questions</h1>
+                {/* <FAQ faqs={faqs} /> */}
+              </div>
+
+              </div>
            </div>
              
         </main>

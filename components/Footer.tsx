@@ -12,7 +12,7 @@ Date
 ();
   return (
     <footer className='bg-[#1E242D] flex flex-col text-white  mt-5 border-t border-gray-100 relative'>
-    <div className="bg-primary-blue w-[80%] md:w-[1160px]  h-[300px] mx-auto flex justify-between items-center rounded-2xl p-10 absolute left-0 right-0 -top-20 ">
+    <div className="bg-primary-blue max-width h-[300px] mx-auto flex justify-between items-center rounded-2xl p-10 absolute left-0 right-0 -top-20 ">
                 <div className="">
                  <h1 className='text-white 2xl:text-[40px] sm:text-[36px] text-[20px] font-extrabold'>Download Nextride<br/> App for free</h1>
                  <p className='text-[18px] text-gray-200 font-light mt-5'>TFor faster, easier booking and exclusive deals.</p>

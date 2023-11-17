@@ -8,8 +8,8 @@ const Hero = () => {
   
 
   return (
-    <div className="hero">
-      <div className="flex-1 pt-36 padding-x">
+    <div className="hero bg-ash">
+      <div className=" pt-36 padding-x">
         <h1 className="hero__title">
            Find, book, and hire vehicle in 
            <span className="text-primary-blue inline-block flex-col justify-center items-center">
@@ -19,7 +19,7 @@ const Hero = () => {
                alt="logo"
                width={136.068}
                height={6.813}
-               className="object-contain "
+               className="object-contain -mt-4"
               />
            </span> steps.
         </h1>
@@ -27,7 +27,7 @@ const Hero = () => {
         <p className="hero__subtitle">
            Streamline your vehicle hire experience with our effortless booking process.
         </p>
-        <div className="flex justify-start items-center gap-5 mt-2">
+        <div className="flex flex-wrap justify-start items-center gap-5 mt-2">
                  <Image
                       src="/App Store.png"
                       alt="logo"
@@ -59,7 +59,7 @@ const Hero = () => {
           <Image src="/hero.png" alt="hero" fill className="object-contain" />
         </div>
 
-        <div className="hero__image-overlay" />
+        {/* <div className="hero__image-overlay" /> */}
       </div>
     </div>
   );

@@ -12,14 +12,14 @@ const Navbar = () => {
 
   return (
     <header className="w-full absolute z-10">
-      <nav className="max-width flex justify-between gap-64 items-center sm:px-16 px-6 py-4 bg-transparent">
+      <nav className="max-width flex justify-between items-center  py-4 bg-transparent">
         <Link href="/" className="flex justify-center items-center">
           <Image
             src="/logo1.svg"
             alt="logo"
             width={118}
             height={118}
-            className="object-contain"
+            className="w-[150px] h-[50px] "
           />
         </Link>
 
@@ -57,35 +57,36 @@ const Navbar = () => {
         <div
           className={`${
             isMobileMenuOpen ? 'block' : 'hidden'
-          } md:hidden flex justify-center items-center flex-col space-y-4 bg-blue-500 p-4 absolute top-16 left-0 w-full`}
+          } md:hidden flex justify-start mt-14 items-center flex-col space-y-7 text-2xl bg-white p-4 absolute top-16 left-0 w-full h-screen`}
         >
-          <Link href="/" className="text-white hover:text-gray-800 font-bold">
-          Home
+          <Link href="/" className="text-black hover:text-primary-blue w-full transition-all font-bold">
+          Become a renter
           </Link>
-          <Link href="/" className="text-white hover:text-gray-800 font-bold">
+          <Link href="/" className="text-black hover:text-primary-blue w-full transition-all font-bold">
           About Us
           </Link>
-          <Link href="/" className="text-white hover:text-gray-800 font-bold">
+          <Link href="/" className="text-black hover:text-primary-blue w-full transition-all font-bold">
           Our Services
           </Link>
-          <Link href="/" className="text-white hover:text-gray-800 font-bold">
+          <Link href="/" className="text-black hover:text-primary-blue w-full transition-all font-bold">
           Contact Us
           </Link>
         </div>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex mr-80 space-x-4">
-        <Link href="/" className="text-primary-blue hover:text-grey font-bold">
-          Home
+        <div className="hidden md:flex gap-5">
+        <Link href="/" className="text-black hover:text-primary-blue font-bold">
+        Become a renter
+
           </Link>
-          <Link href="/" className="text-primary-blue hover:text-grey font-bold">
-          About Us
+          <Link href="/" className="text-black hover:text-primary-blue font-bold">
+          Rental deals
           </Link>
-          <Link href="/" className="text-primary-blue hover:text-grey font-bold">
-          Our Services
+          <Link href="/" className="text-black hover:text-primary-blue font-bold">
+          Why choose us
           </Link>
-          <Link href="/" className="text-primary-blue hover:text-grey font-bold">
-          Contact Us
+          <Link href="/" className="text-black hover:text-primary-blue font-bold ml-6">
+          Login
           </Link>
         </div>
       </nav>

@@ -12,11 +12,11 @@
 }
 /* START: General styles */
 .max-width {
-  @apply max-w-[1440px] mx-auto;
+  @apply max-w-[1440px] w-[95%] mx-auto;
 }
 
 .padding-x {
-  @apply sm:px-16 px-6;
+  @apply sm:px-14 px-3;
 }
 
 .padding-y {
@@ -38,11 +38,11 @@
 
 /* START: Hero styles */
 .hero {
-  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+  @apply flex lg:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
 }
 
 .hero__title {
-  @apply 2xl:text-[64px] sm:text-[58px] text-[50px] font-extrabold ;
+  @apply 2xl:text-[64px] sm:text-[58px] text-[40px] font-extrabold ;
 }
 
 .hero__subtitle {
@@ -95,3 +95,7 @@
   @apply flex-1 flex sm:justify-end justify-center max-sm:mt-4 gap-10;
 }
 /* END: Footer styles */
+
+.bg-ash {
+  background: linear-gradient(270deg, #FAFAFA 0%, rgba(250, 250, 250, 0.00) 203.13%);
+}

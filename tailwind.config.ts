@@ -17,6 +17,14 @@ module.exports = {
           DEFAULT: "#2B59FF",
           100: "#F5F8FF",
         },
+        screens: {
+          mobile: "360px",
+          tablet: "580px",
+          tablet_l: "650px",
+          laptop: "950px",
+          
+         
+        },
         "secondary-orange": "#f79761",
         "light-white": {
           DEFAULT: "rgba(59,60,152,0.03)",
