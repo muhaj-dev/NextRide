@@ -40,6 +40,7 @@ const Footer = () => {
             alt="logo"
             width={437}
             height={64}
+            priority
             className="object-contain pb-60"
           />
         </div>

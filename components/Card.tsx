@@ -1,19 +1,24 @@
 "use client"
-import React, { useState } from 'react';
+
+import React, { useState, FormEvent } from 'react';
 import DatePicker from 'react-datepicker';
+import { useRouter } from 'next/navigation'
 import 'react-datepicker/dist/react-datepicker.css';
 import { CustomButton } from '../components';
 
 interface FormData {
-  location: string;
+  PickLocation: string;
+  DropLocation: string;
   dropOffDate: Date | null;
   returnDate: Date | null;
 }
 
 const Card: React.FC = () => {
+  const router = useRouter()
   // State to manage form data
   const [formData, setFormData] = useState<FormData>({
-    location: '',
+    PickLocation: '',
+    DropLocation: '',
     dropOffDate: null,
     returnDate: null,
   });
@@ -27,8 +32,10 @@ const Card: React.FC = () => {
   };
 
   // Function to handle form submission (simulating a POST request)
-  const handleSubmit = () => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
     console.log(formData);
+    router.push('/infotransfer')
 
     // Simulate a POST request to an endpoint
     // fetch('your-api-endpoint', {
@@ -49,30 +56,32 @@ const Card: React.FC = () => {
   };
 
   return (
-    <div className="bg-white w-[100%] md:w-[95%] py-2 px-4 rounded-3xl mt-10 shadow-2xl mb-5">
-      <div className="flex flex-wrap justify-center md:justify-between items-center gap-2 md:gap-6">
-        <div className="w-full pb-5 w[45%] md:w-[160px] max-w-[170px] pl-0">
+    <div className="bg-white w-[95%] max-w-[1300px] mx-auto  py-4 px-4 rounded-2xl mt-10 shadow-2xl mb-5">
+      <form onSubmit={handleSubmit} className="w- flex flex-wrap justify-between  items-center gap-4">
+        <div className=" px-3 py-2 w-full sm:w-[45%] lg:w-[17%] border-2 rounded-2xl">
           <h2 className="text-md font-semibold mt-2">Pick Location</h2>
           <input
             type="text"
-            value={formData.location}
-            onChange={(e) => handleInputChange('location', e.target.value)}
+            value={formData.PickLocation}
+            onChange={(e) => handleInputChange('PickLocation', e.target.value)}
             placeholder="Search your location"
-            className="border p-2 mt-2 w-full"
+            className=" mt-2 w-full focus:outline-none"
+            required
           />
         </div>
-        <div className="w-full pb-5 w[45%] md:w-[160px] max-w-[170px] pl-0">
+        <div className=" px-3 py-2 w-full sm:w-[45%] lg:w-[17%] border-2 rounded-2xl">
           <h2 className="text-md font-semibold mt-2">Drop off Location</h2>
           <input
             type="text"
-            value={formData.location}
-            onChange={(e) => handleInputChange('location', e.target.value)}
+            value={formData.DropLocation}
+            onChange={(e) => handleInputChange('DropLocation', e.target.value)}
             placeholder="Search your location"
-            className="border p-2 mt-2 w-full"
+            className=" mt-2 w-full focus:outline-none"
+            required
           />
         </div>
       
-        <div className="w-full w[45%] md:w-[160px] max-w-[170px] pb-5  pl-0">
+        <div className="px-3 py-2 w-full sm:w-[45%] lg:w-[17%] border-2 rounded-2xl">
           <h2 className="text-md font-semibold mt-2">Drop Off Date</h2>
           <DatePicker
             selected={formData.dropOffDate}
@@ -82,10 +91,11 @@ const Card: React.FC = () => {
             timeIntervals={15}
             dateFormat="Pp"
             placeholderText="Tue 15 Feb, 09:00"
-            className="border p-2 mt-2 w-full"
+            className=" mt-2 w-full focus:outline-none"
+            required
           />
         </div>
-        <div className="w-full w[45%] md:w-[160px] max-w-[170px]  pb-5 pl-0">
+        <div className="px-3 py-2 w-full sm:w-[45%] lg:w-[17%] border-2 rounded-2xl">
           <h2 className="text-md font-semibold mt-2">Return Date</h2>
           <DatePicker
             selected={formData.returnDate}
@@ -95,17 +105,24 @@ const Card: React.FC = () => {
             timeIntervals={15}
             dateFormat="Pp"
             placeholderText="Tue 16 Feb, 09:00"
-            className="border p-2 mt-2 w-full"
+            className=" mt-2 w-full focus:outline-none"
+            required
           />
         </div>
-        <div className="w-full w[45%] md:w-[160px] max-w-[170px] md:border-l pl-0">
-          <CustomButton
+        <div className="w-full lg:w-[17%] ">
+          {/* <CustomButton
             title="Proceed"
             containerStyles="bg-primary-blue text-white w-[160px] rounded-lg mt-2 p-4"
             handleClick={handleSubmit}
-          />
+          /> */}
+          <button
+            type='submit'
+            className='w-full   bg-primary-blue text-white p-4 md:p-6 rounded-md hover:bg-opacity-80'
+          >
+            Proceed
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

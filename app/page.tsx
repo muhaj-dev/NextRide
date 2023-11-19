@@ -28,9 +28,9 @@ export default function Home() {
      </Head> */}
      <main className='overflow-hidden'>
            <Hero />
-           <div className="flex-center">
+           {/* <div className="flex-center max-width"> */}
              <Card /> 
-           </div>
+           {/* </div> */}
            {/* <Brands /> */}
            <div className="mx-auto ">
             <div className='flex justify-center items-center flex-col gap-4 my-20'>

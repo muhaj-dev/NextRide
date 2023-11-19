@@ -85,9 +85,7 @@ const Navbar = () => {
           <Link href="/" className="text-black hover:text-primary-blue font-bold">
           Why choose us
           </Link>
-          <Link href="/" className="text-black hover:text-primary-blue font-bold ml-6">
-          Login
-          </Link>
+        
         </div>
       </nav>
     </header>
