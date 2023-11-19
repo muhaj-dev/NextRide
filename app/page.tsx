@@ -51,9 +51,9 @@ export default function Home() {
               <h1 className='block md:hidden 2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold text-center'>Most popular vehicle <br/>hire deals</h1>
               <h1 className='hidden md:block 2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold mb-4'>Most popular vehicle hire deals</h1>
                 <div className=" flex flex-wrap justify-center  items-center  gap-5 mt-10">
-                <CarCard imageUrl='/cars/2021 Toyota Camry.jpg' title='2021 Toyota Camry' year={2013} pricePerDay={4000} />
-                <CarCard imageUrl='/cars/2021 Toyota Coaster.jpg' title='2021 Toyota Coaster' year={2014} pricePerDay={4000} />
-                <CarCard imageUrl='/cars/2022 Lexus.jpg' title='2022 Lexus' year={2019} pricePerDay={4000} />
+                <CarCard imageUrl='/cars/2021 Toyota Camry.jpg' title='2021 Toyota Camry' year={2021} pricePerDay={4000} />
+                <CarCard imageUrl='/cars/2021 Toyota Coaster.jpg' title='2021 Toyota Coaster' year={2021} pricePerDay={4000} />
+                <CarCard imageUrl='/cars/2022 Lexus.jpg' title='2022 Lexus' year={2022} pricePerDay={4000} />
                 <CarCard imageUrl='/cars/2022 Range Rover Velar.jpg' title='2022 Range Rover Velar' year={2022} pricePerDay={4000} />
                 <CarCard imageUrl='/cars/2022 Rolls Royce Cullinan.jpg' title='2022 Rolls Royce Cullinan' year={2022} pricePerDay={4000} />
                 <CarCard imageUrl='/cars/2022 Toyota Hiace.jpg' title='2022 Toyota Hiace' year={2022} pricePerDay={4000} />
