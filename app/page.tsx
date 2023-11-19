@@ -3,16 +3,9 @@ import Image from 'next/image'
 import Head from 'next/head';
 import {BsArrowRight } from  "react-icons/bs"
 import Link from 'next/link';
+import FAQ from '@/components/FAQ';
 export default function Home() {
-  const testimonials = [
-    {
-      name: 'John Doe',
-      image: '/Rectangle 26.png', 
-      description: 'There are many variations of passages a but Nullam vulputate urna, adipiscing vulputate mauris nisl sagittis et. Quisque id semper est nullam enim leo in nec laoreet.',
-      year: 5,
-    },
-
-  ];
+ 
   const faqs = [
     {
       question: 'What is Next.js?',
@@ -58,12 +51,12 @@ export default function Home() {
               <h1 className='block md:hidden 2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold text-center'>Most popular vehicle <br/>hire deals</h1>
               <h1 className='hidden md:block 2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold mb-4'>Most popular vehicle hire deals</h1>
                 <div className=" flex flex-wrap justify-center  items-center  gap-5 mt-10">
-                <CarCard imageUrl='/Red Mazda Car - 1180x664 1.png' title='Red Mazda 6 - Elite Estate' year={2013} pricePerDay={4000} />
-                <CarCard imageUrl='/Red Mazda Car - 1180x664 1.png' title='Red Mazda 6 - Elite Estate' year={2014} pricePerDay={4000} />
-                <CarCard imageUrl='/Red Mazda Car - 1180x664 1.png' title='Red Mazda 6 - Elite Estate' year={2019} pricePerDay={4000} />
-                <CarCard imageUrl='/Red Mazda Car - 1180x664 1.png' title='Red Mazda 6 - Elite Estate' year={2022} pricePerDay={4000} />
-                <CarCard imageUrl='/Red Mazda Car - 1180x664 1.png' title='Red Mazda 6 - Elite Estate' year={2022} pricePerDay={4000} />
-                <CarCard imageUrl='/Red Mazda Car - 1180x664 1.png' title='Red Mazda 6 - Elite Estate' year={2022} pricePerDay={4000} />
+                <CarCard imageUrl='/cars/2021 Toyota Camry.jpg' title='2021 Toyota Camry' year={2013} pricePerDay={4000} />
+                <CarCard imageUrl='/cars/2021 Toyota Coaster.jpg' title='2021 Toyota Coaster' year={2014} pricePerDay={4000} />
+                <CarCard imageUrl='/cars/2022 Lexus.jpg' title='2022 Lexus' year={2019} pricePerDay={4000} />
+                <CarCard imageUrl='/cars/2022 Range Rover Velar.jpg' title='2022 Range Rover Velar' year={2022} pricePerDay={4000} />
+                <CarCard imageUrl='/cars/2022 Rolls Royce Cullinan.jpg' title='2022 Rolls Royce Cullinan' year={2022} pricePerDay={4000} />
+                <CarCard imageUrl='/cars/2022 Toyota Hiace.jpg' title='2022 Toyota Hiace' year={2022} pricePerDay={4000} />
                 </div>     
                <div className="flex justify-start items-center gap-2 rounded-lg shadow-lg mt-4 p-1">
                <CustomButton 
@@ -73,14 +66,12 @@ export default function Home() {
                   <BsArrowRight />
                 </div> 
               </div>
-              <div className=" bg-ash py-20">
+              <div className=" bg-ash pt-20 pb-1">
                 <div className='max-width  flex justify-center items-center flex-col mb-64'>
                   <p className='text-[16px] text-black font-light mt-5'>Testimonials</p>
                   <h1 className='2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold'>What people say about us?</h1>
                     <div className="flex flex-wrap gap-5 mt-5">
-                    {/* {testimonials.map((testimonial, index) => (
-                      <Testimonials key={index} {...testimonial} />
-                    ))} */}
+                    <Testimonials />
 
                 </div>
                 </div>
@@ -88,7 +79,7 @@ export default function Home() {
               <div className="py-20">
                 <div className="max-width  flex justify-center items-center flex-col mb-64">
                 <h1 className="text-2xl font-bold">Frequently Asked Questions</h1>
-                {/* <FAQ faqs={faqs} /> */}
+                <FAQ faqs={faqs} />
               </div>
 
               </div>

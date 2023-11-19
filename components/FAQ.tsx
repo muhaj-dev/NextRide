@@ -1,42 +1,40 @@
-// import { useState } from 'react';
-// import { FiPlus, FiMinus } from 'react-icons/fi';
+'use client'
 
-// interface FAQItem {
-//   question: string;
-//   answer: string;
-// }
+import { useState } from 'react';
+import { FiPlus, FiMinus } from 'react-icons/fi';
 
-// interface FAQProps {
-//   faqs: FAQItem[];
-// }
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
-// const FAQ: React.FC<FAQProps> = ({ faqs }) => {
-//   const [openIndex, setOpenIndex] = useState<number | null>(null);
+interface FAQProps {
+  faqs: FAQItem[];
+}
 
-//   const toggleFAQ = (index: number) => {
-//     if (openIndex === index) {
-//       setOpenIndex(null);
-//     } else {
-//       setOpenIndex(index);
-//     }
-//   };
+const FAQ: React.FC<FAQProps> = ({ faqs }) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-//   return (
-//     <div>
-//       {faqs.map((faq, index) => (
-//         <div key={index} className="mb-4">
-//           <div
-//             className="flex items-center justify-between cursor-pointer"
-//             onClick={() => toggleFAQ(index)}
-//           >
-//             <h3 className="text-xl font-semibold">{faq.question}</h3>
-//             {openIndex === index ? <FiMinus /> : <FiPlus />}
-//           </div>
-//           {openIndex === index && <p className="text-gray-600 mt-2">{faq.answer}</p>}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
+  const toggleFAQ = (index: number) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
-// export default FAQ;
+  return (
+    <div className='max-w-[700px] w-[95%] mt-14 '>
+      {faqs.map((faq, index) => (
+        <div key={index} className="mb-4">
+          <div
+            className="flex items-center justify-between cursor-pointer border-t-2 p-4"
+            onClick={() => toggleFAQ(index)}
+          >
+            <h3 className="text-xl font-semibold">{faq.question}</h3>
+            {openIndex === index ? <FiMinus /> : <FiPlus />}
+          </div>
+          {openIndex === index && <p className="text-gray-600 mt-2">{faq.answer}</p>}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default FAQ;
