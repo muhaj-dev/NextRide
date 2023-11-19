@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <div className="hero bg-ash">
-      <div className=" pt-36 padding-x">
+      <div className=" pt-36 padding-x max-w-[700px]">
         <h1 className="hero__title">
            Find, book, and hire vehicle in 
            <span className="text-primary-blue inline-block flex-col justify-center items-center">
