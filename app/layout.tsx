@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet"/>
-       <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+       {/* <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> */}
       <body className='relative'>
         <NavBar />
         {children}

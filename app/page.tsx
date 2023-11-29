@@ -22,10 +22,10 @@ export default function Home() {
   ];
   return (
     <>
-     {/* <Head children={undefined}>
+     <Head >
        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet"/>
        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> 
-     </Head> */}
+     </Head>
      <main className='overflow-hidden'>
            <Hero />
            {/* <div className="flex-center max-width"> */}
@@ -34,14 +34,14 @@ export default function Home() {
            {/* <Brands /> */}
            <div className="mx-auto ">
             <div className='flex justify-center items-center flex-col gap-4 my-20'>
-              <p className='text-[16px] text-black font-light mt-5'>HOW IT WORK</p>
-              <h1 className='block md:hidden 2xl:text-[29px] sm:text-[22px] text-[20px] font-extrabold text-center'>HOW IT WORK</h1>
-              <h1 className='hidden md:block 2xl:text-[29px] sm:text-[22px] text-[20px] font-extrabold text-center mb-10'>Rent with following 3 working steps</h1>
+              {/* <p className='text-[16px] text-black font-light mt-5'>HOW IT WORK</p> */}
+              <h1 className='block  2xl:text-[29px] sm:text-[22px] text-[20px] font-extrabold text-center'>HOW IT WORKS</h1>
+              <h1 className='block 2xl:text-[29px] sm:text-[22px] text-[20px] font-extrabold text-center mb-10'>Hire with following 3 working steps</h1>
 
               <div className="max-width flex flex-wrap flex-row justify-center items-center gap-10 mt-5">
-                 <CardHow backgroundColor="#FFFF"  icon="/location.png" title='Choose location' description='Choose your location and find your best car.' />
-                 <CardHow backgroundColor='radial-gradient(115.89% 115.89% at 49.61% 115.89%, #3083FF 0%, #87B5FB 100%)' icon="/calendar-tick.png" title='Pick-up date' description='Select your pick up date and time to book your car.'/>
-                 <CardHow backgroundColor="#FFFF" icon="/car.png" title='Book your car' description='Book your car and we will deliver it directly to you.'/>
+                 <CardHow backgroundColor="#FFFF"  icon="/location.png" title='Choose location' description='Choose your location and find your best vehicle.' />
+                 <CardHow backgroundColor='radial-gradient(115.89% 115.89% at 49.61% 115.89%, #3083FF 0%, #87B5FB 100%)' icon="/calendar-tick.png" title='Pick-up date' description='Select your pick up date and time to book your vehicle.'/>
+                 <CardHow backgroundColor="#FFFF" icon="/car.png" title='Book your vehicle' description='Book your vehicle and we will deliver it directly to you.'/>
               </div>
 
             </div>

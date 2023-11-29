@@ -8,12 +8,12 @@ const Hero = () => {
   
 
   return (
-    <div className="hero bg-ash">
+    <div className="hero">
       <div className=" pt-36 padding-x max-w-[700px]">
-        <h1 className="hero__title">
+        <div className="hero__title">
            Find, book, and hire vehicle in 
-           <span className="text-primary-blue inline-block flex-col justify-center items-center">
-             <p>Easy</p>
+           <span className="text-[#3083FF] w-[100px] sm:w-[150px] pl-2 inline-block flex-col justify-center items-center">
+              <p> Easy </p>
              <Image
                src="/Rectangle 16.png"
                alt="logo"
@@ -22,7 +22,7 @@ const Hero = () => {
                className="object-contain -mt-4"
               />
            </span> steps.
-        </h1>
+        </div>
 
         <p className="hero__subtitle">
            Streamline your vehicle hire experience with our effortless booking process.

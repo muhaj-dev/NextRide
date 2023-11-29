@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full absolute z-10">
+    <header className="w-full  z-10 fixed bg-white">
       <nav className="max-width flex justify-between items-center  py-4 bg-transparent">
         <Link href="/" className="flex justify-center items-center">
           <Image
@@ -76,14 +76,17 @@ const Navbar = () => {
         {/* Desktop menu */}
         <div className="hidden md:flex gap-5">
         <Link href="/" className="text-black hover:text-primary-blue font-bold">
-        Become a renter
+        About us
 
           </Link>
           <Link href="/" className="text-black hover:text-primary-blue font-bold">
-          Rental deals
+        Our Services
           </Link>
           <Link href="/" className="text-black hover:text-primary-blue font-bold">
-          Why choose us
+          FAQ
+          </Link>
+          <Link href="/" className="text-black hover:text-primary-blue font-bold">
+          Contact Us
           </Link>
         
         </div>
