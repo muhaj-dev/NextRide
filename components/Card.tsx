@@ -52,23 +52,7 @@ const Card: React.FC = () => {
       .catch(error => {
         console.error("Error:", error);
       });
-  
-    // Simulate a POST request to an endpoint
-//     fetch('https://script.google.com/macros/s/AKfycbypl8_dnWNp_RYlPLBFjsMWiVig6oCLU8fU3cW6cqXyNvgVE8mI2EeQ7yvxHQE4ei7w/exec', {
-//       method: 'POST',
-//       // headers: {
-//       //   'Content-Type': 'application/json',
-//       // },
-//       body: JSON.stringify(formData),
-//     // })
-//     headers: {
-//       'Content-Type': 'text/plain;charset=utf-8',
-//   }
-// }).then(response => {
-//   console.log("success:", response);
-// }).catch(err => {
-//   console.log("Error:" + err);
-// });
+
   };
 
   return (
@@ -80,7 +64,7 @@ const Card: React.FC = () => {
             type="text"
             value={formData.PickLocation}
             onChange={(e) => handleInputChange('PickLocation', e.target.value)}
-            placeholder="PickLocation"
+            placeholder="Pick Location"
             className=" mt-2 w-full focus:outline-none"
             required
           />
@@ -91,13 +75,13 @@ const Card: React.FC = () => {
             type="text"
             value={formData.DropOffLocation}
             onChange={(e) => handleInputChange('DropOffLocation', e.target.value)}
-            placeholder="DropOffLocation"
+            placeholder="Drop Off Location"
             className=" mt-2 w-full focus:outline-none"
             required
           />
         </div>
       
-        <div className="px-3 py-2 w-full sm:w-[45%] lg:w-[17%] border-2 rounded-2xl">
+        <div className="px-3 py-2 w-full  sm:w-[45%] lg:w-[17%] border-2 rounded-2xl">
           <h2 className="text-md font-semibold mt-2">Pick up Date</h2>
           <DatePicker
             selected={formData.PickUpDate}
@@ -106,8 +90,8 @@ const Card: React.FC = () => {
             timeFormat="HH:mm"
             timeIntervals={15}
             dateFormat="Pp"
-            placeholderText="PickUpDate"
-            className=" mt-2 w-full bg-red-500  border-2 focus:outline-none"
+            placeholderText="Pick Up Date"
+            className=" mt-2 w-full focus:outline-none"
             required
           />
         </div>
@@ -120,7 +104,7 @@ const Card: React.FC = () => {
             timeFormat="HH:mm"
             timeIntervals={15}
             dateFormat="Pp"
-            placeholderText="DropOffDate"
+            placeholderText="Drop Off Date"
             className=" mt-2 w-full focus:outline-none"
             required
           />
