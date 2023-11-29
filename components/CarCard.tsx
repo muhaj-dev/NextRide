@@ -5,13 +5,13 @@ import {BsArrowRight } from  "react-icons/bs"
 
 const CarCard: React.FC<CarCardProps> = ({ imageUrl, title,year,  pricePerDay }: CarCardProps) => {
   return (
-    <div className="sm:w-[45%] max-w-[310px] mb-2 bg-white hover:bg-gray-100 rounded-md mx-auto">
+    <div className="sm:w-[45%] max-w-[550px] mb-2 bg-white hover:bg-gray-100 rounded-md mx-auto">
     <div className="flex justify-center items-center">
     <Image
           src={imageUrl}
           alt={title}
-          width={228}
-          height={128}
+          width={628}
+          height={528}
           objectFit="cover"
           objectPosition="center"
         />
