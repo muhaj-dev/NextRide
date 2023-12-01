@@ -75,14 +75,14 @@ const Navbar = () => {
 
         {/* Desktop menu */}
         <div className="hidden md:flex gap-5">
-        <Link href="/" className="text-black hover:text-primary-blue font-bold">
+        <Link href="/about" className="text-black hover:text-primary-blue font-bold">
         About us
 
           </Link>
-          <Link href="/" className="text-black hover:text-primary-blue font-bold">
+          <Link href="#service" className="text-black hover:text-primary-blue font-bold">
         Our Services
           </Link>
-          <Link href="/" className="text-black hover:text-primary-blue font-bold">
+          <Link href="#faq" className="text-black hover:text-primary-blue font-bold">
           FAQ
           </Link>
           <Link href="/" className="text-black hover:text-primary-blue font-bold">

@@ -32,7 +32,7 @@ export default function Home() {
              <Card /> 
            {/* </div> */}
            {/* <Brands /> */}
-           <div className="mx-auto ">
+           <div className="mx-auto " id='service'>
             <div className='flex justify-center items-center flex-col gap-4 my-20'>
               {/* <p className='text-[16px] text-black font-light mt-5'>HOW IT WORK</p> */}
               <h1 className='block  2xl:text-[29px] sm:text-[22px] text-[20px] font-extrabold text-center'>HOW IT WORKS</h1>

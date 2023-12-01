@@ -20,7 +20,7 @@ const FAQ: React.FC<FAQProps> = ({ faqs }) => {
   };
 
   return (
-    <div className='max-w-[700px] w-[95%] mt-14 '>
+    <div className='max-w-[700px] w-[95%] mt-14' id='faq'>
       {faqs.map((faq, index) => (
         <div key={index} className="mb-4">
           <div
