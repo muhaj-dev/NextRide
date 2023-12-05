@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FaCar } from "react-icons/fa";
-import { MdIndeterminateCheckBox } from "react-icons/md"
+import { MdIndeterminateCheckBox } from "react-icons/md";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 export default function page() {
@@ -30,8 +30,8 @@ export default function page() {
           other security-related offerings.
         </div>
         <div className="basis-[400px] text-center">
-        <div className="w-fit mx-auto pb-3 ">
-        <VscWorkspaceTrusted size={50}/>
+          <div className="w-fit mx-auto pb-3 ">
+            <VscWorkspaceTrusted size={50} />
           </div>
           At Nextride, we pride ourselves on being trustworthy, reliable, safe,
           and affordable. Our dedicated team is ever-ready to offer assistance.
@@ -39,29 +39,24 @@ export default function page() {
         </div>
       </div>
       <p className="font-bold text-[2rem] text-center mt-10">Our Mission</p>
-      <p className="my-4 text-center"> 
-      To redefine the mobility experience by surpassing and setting new industry
-      standards.
-        </p> 
+      <p className="my-4 text-center">
+        To redefine the mobility experience by surpassing and setting new
+        industry standards.
+      </p>
 
-        <p className="font-bold text-[2rem] text-center mt-10">Our Vision </p>
-      <p className="my-4 text-center"> 
-      To become the gold standard in the world of mobility.
-        </p> 
-      
-        <p className="font-bold text-[2rem] text-center mt-10"> CONTACT US</p>
-        <div className="w-fit mx-auto">
-            <address className="my-4 font-semibold"> 
-            Email: <a href='hello.nextride@gmail.com'>
-            hello.nextride@gmail.com 
-                </a>
-            <br />
-            Phone number: +234
-            809 574 3804
-                </address> 
+      <p className="font-bold text-[2rem] text-center mt-10">Our Vision </p>
+      <p className="my-4 text-center">
+        To become the gold standard in the world of mobility.
+      </p>
 
-        </div>
-    
+      <p className="font-bold text-[2rem] text-center mt-10"> CONTACT US</p>
+      <div className="w-fit mx-auto">
+        <address className="my-4 font-semibold">
+          Email: <a href="hello.nextride@gmail.com">hello.nextride@gmail.com</a>
+          <br />
+          Phone number: +234 809 574 3804
+        </address>
+      </div>
     </div>
   );
 }

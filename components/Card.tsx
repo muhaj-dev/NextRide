@@ -6,6 +6,18 @@ import { useRouter } from 'next/navigation'
 import 'react-datepicker/dist/react-datepicker.css';
 import { CustomButton } from '../components';
 import axios from 'axios';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button,
+} from '@chakra-ui/react'
+import InfoContact from './InfoContact';
 
 interface FormData {
   PickLocation: string;
@@ -15,6 +27,9 @@ interface FormData {
 }
 
 const Card: React.FC = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  // const [size, setSize] = React.useState('md')
+
   const router = useRouter()
   // State to manage form data
   const [formData, setFormData] = useState<FormData>({
@@ -48,6 +63,7 @@ const Card: React.FC = () => {
     axios.post('https://sheet.best/api/sheets/0e3c3e37-9c2d-4d71-bdef-467e6496bfd8', formattedFormData)
       .then(response => {
         console.log("Success:", response);
+        onOpen()
       })
       .catch(error => {
         console.error("Error:", error);
@@ -110,19 +126,30 @@ const Card: React.FC = () => {
           />
         </div>
         <div className="w-full lg:w-[17%] ">
-          {/* <CustomButton
-            title="Proceed"
-            containerStyles="bg-primary-blue text-white w-[160px] rounded-lg mt-2 p-4"
-            handleClick={handleSubmit}
-          /> */}
+        
           <button
-            type='submit'
+            // type='submit'
+            // onSubmit={handleSubmit}
             className='w-full   bg-primary-blue text-white p-4 md:p-6 rounded-md hover:bg-opacity-80'
           >
             Proceed
           </button>
         </div>
       </form>
+        <Modal
+        isCentered
+        onClose={onClose}
+        isOpen={isOpen}
+        size={'full'}
+        motionPreset='slideInBottom'
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalBody>
+          <InfoContact  formattedFormData={formData} />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 };

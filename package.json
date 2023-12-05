@@ -9,7 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emailjs/browser": "^3.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "axios": "^1.6.2",
+    "dompurify": "^3.0.6",
+    "framer-motion": "^10.16.12",
     "next": "^14.0.3",
     "react": "^18",
     "react-datepicker": "^4.21.0",
@@ -22,6 +29,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-datepicker": "^4.19.3",
