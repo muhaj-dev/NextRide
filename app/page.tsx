@@ -8,16 +8,39 @@ export default function Home() {
  
   const faqs = [
     {
-      question: 'What is Next.js?',
-      answer: 'Next.js is a popular React framework for building web applications.',
+      question: 'How do I make a reservation?',
+      id: 1,
+      answer: 'To make a reservation, you can visit our website or contact our customer service team directly via the Contact Us page. Provide details such as the pickup/drop-off locations, dates, and vehicle preferences to ensure a smooth booking process.',
     },
     {
-      question: 'How do I get started with Next.js?',
-      answer: 'You can start by creating a Next.js project using `create-next-app`.',
+      question: 'What types of vehicles do you offer for hire?',
+      id: 2,
+      answer: 'We have a diverse fleet that includes compact cars, sedans, SUVs, vans, and even luxury vehicles. You can choose the vehicle that best suits your needs and preferences.',
     },
     {
-      question: 'Is Next.js suitable for SEO?',
-      answer: 'Yes, Next.js offers great support for SEO optimization.',
+      question: ' Can I modify or cancel my reservation?',
+      id: 3,
+      answer: 'Yes, you can modify or cancel your reservation online or by contacting our customer service team. Keep in mind that there may be fees associated with changes, and cancellation policies vary based on the timing of your request. Kindly check out our trip cancellation policy for more details.',
+    },
+    {
+      id: 4,
+      question: 'Does hire outside Lagos attract extra price?',
+      answer: 'Yes, hire outside Lagos attract extra fees',
+    },
+    {
+      question: 'What do I do in case of an accident or breakdown?',
+      id: 5,
+      answer: '   In case of an accident, contact local authorities immediately and then inform our emergency hotline. For breakdowns, our roadside assistance is available 24/7 to provide support. Details can be found in your hire agreement.',
+    },
+    {
+      id: 6,
+      question: 'How do I extend my rental period?',
+      answer: 'If you need to extend your rental, contact our customer service team as soon as possible. Extensions are subject to availability and additional charges.',
+    },
+    {
+      id: 7,
+      question: 'What is included in the rental price?',
+      answer: '   The rental price generally includes the cost of the vehicle, basic insurance coverage, and any applicable taxes and fees. Additional options such as GPS, child seats, or extended insurance coverage may incur extra charges.',
     },
   ];
   return (

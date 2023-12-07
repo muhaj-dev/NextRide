@@ -16,16 +16,8 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-interface InfoContactProps {
-  formattedFormData: {
-    PickLocation: string;
-    DropOffLocation: string;
-    DropOffDate: Date | null;
-    PickUpDate: Date | null;
-  };
-}
-
-const InfoContact: React.FC<InfoContactProps> = ({ formattedFormData }) => {
+export default function CarType({ params }: { params: { cartype: string } }) {
+  const id = params.cartype;
   const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -33,19 +25,18 @@ const InfoContact: React.FC<InfoContactProps> = ({ formattedFormData }) => {
 
   const redirect = () => {
     onClose();
-    window.location.reload()
+    router.push("/");
   };
 
   useEffect(() => {
     // Update the content of the hidden div with sanitized HTML
-    const location = `Pickup Location: "${formattedFormData.PickLocation}", Drop Off Location: "${formattedFormData.DropOffLocation}", Pick Up Date: "${formattedFormData.PickUpDate}", Drop Off Date: "${formattedFormData.DropOffDate}"`;
+    const location = `Bus Type: ${id}`;
     const sanitizedLocation = DOMPurify.sanitize(location);
 
     if (formRef.current) {
       formRef.current["message"].value = sanitizedLocation;
     }
-  }, [formattedFormData]);
-
+  }, [id]);
   const sendEmail = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
@@ -58,13 +49,15 @@ const InfoContact: React.FC<InfoContactProps> = ({ formattedFormData }) => {
           "0WadDAr_uJOc7X1_I" // Replace with your public key
         )
         .then((result) => {
+          // console.log(result.text);
+          // console.log('message sent')
           onOpen();
         })
         .catch((error) => {
           toast({
             position: "top-right",
-            title: "Unable to book Ride",
-            description: "Your ride has failed to booked.",
+            title: "Unable to book Vehicle.",
+            description: "Your vehicle has failed to booked.",
             status: "error",
             duration: 3000,
             isClosable: true,
@@ -72,11 +65,10 @@ const InfoContact: React.FC<InfoContactProps> = ({ formattedFormData }) => {
           console.log(error.text);
         });
     }
-    // redirect('/');
   };
 
   return (
-    <div className="pt-12">
+    <div className="pt-32">
       <div className="mb-52 w-[95%] max-w-[700px] mx-auto py-4 px-5 border-2 rounded-3xl">
         <p className="text-center font-semibold text-4xl mb-4">
           Contact Information
@@ -109,7 +101,7 @@ const InfoContact: React.FC<InfoContactProps> = ({ formattedFormData }) => {
 
           <div className="mb-4">
             <input
-              type="number"
+              type="tel"
               name="phoneNumber"
               placeholder="Phone Number"
               className="mt-1 p-2 border rounded-md w-full"
@@ -136,6 +128,7 @@ const InfoContact: React.FC<InfoContactProps> = ({ formattedFormData }) => {
             Submit
           </button>
         </form>
+
         <Modal
           closeOnOverlayClick={false}
           isCentered
@@ -155,9 +148,9 @@ const InfoContact: React.FC<InfoContactProps> = ({ formattedFormData }) => {
                 to process your request.
               </p>
 
-              <button onClick={redirect} className="text-blue-500">
+              <Link href="/" className="text-blue-500">
                 Redirect to home page
-              </button>
+              </Link>
             </ModalBody>
 
             <ModalFooter className=" w-[100%] mx-auto mb-5">
@@ -173,6 +166,4 @@ const InfoContact: React.FC<InfoContactProps> = ({ formattedFormData }) => {
       </div>
     </div>
   );
-};
-
-export default InfoContact;
+}

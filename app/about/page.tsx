@@ -48,15 +48,6 @@ export default function page() {
       <p className="my-4 text-center">
         To become the gold standard in the world of mobility.
       </p>
-
-      <p className="font-bold text-[2rem] text-center mt-10"> CONTACT US</p>
-      <div className="w-fit mx-auto">
-        <address className="my-4 font-semibold">
-          Email: <a href="hello.nextride@gmail.com">hello.nextride@gmail.com</a>
-          <br />
-          Phone number: +234 809 574 3804
-        </address>
-      </div>
     </div>
   );
 }

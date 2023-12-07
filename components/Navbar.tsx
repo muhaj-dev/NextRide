@@ -60,13 +60,16 @@ const Navbar = () => {
           } md:hidden flex justify-start mt-14 items-center flex-col space-y-7 text-2xl bg-white p-4 absolute top-16 left-0 w-full h-screen`}
         >
           <Link href="/" className="text-black hover:text-primary-blue w-full transition-all font-bold">
-          Become a renter
+          Become a Host
           </Link>
-          <Link href="/" className="text-black hover:text-primary-blue w-full transition-all font-bold">
+          <Link href="/about" className="text-black hover:text-primary-blue w-full transition-all font-bold">
           About Us
           </Link>
-          <Link href="/" className="text-black hover:text-primary-blue w-full transition-all font-bold">
+          <Link href="#service" className="text-black hover:text-primary-blue w-full transition-all font-bold">
           Our Services
+          </Link>
+          <Link href="#faq" className="text-black hover:text-primary-blue w-full transition-all font-bold">
+          FAQ
           </Link>
           <Link href="/" className="text-black hover:text-primary-blue w-full transition-all font-bold">
           Contact Us
@@ -75,6 +78,9 @@ const Navbar = () => {
 
         {/* Desktop menu */}
         <div className="hidden md:flex gap-5">
+        <Link href="/" className="text-black hover:text-primary-blue font-bold">
+        Become a Host
+          </Link>
         <Link href="/about" className="text-black hover:text-primary-blue font-bold">
         About us
 
