@@ -4,6 +4,7 @@ import './globals.css'
 
 import { Footer, NavBar } from "../components";
 import { Providers } from '@/provider/Providers';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet"/>
+       {/* <Link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet"/> */}
        {/* <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> */}
       <body className='relative'>
         <Providers>

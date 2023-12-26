@@ -9,11 +9,11 @@ const Hero = () => {
 
   return (
     <div className="hero">
-      <div className=" pt-36 padding-x max-w-[700px]">
+      <div className=" pt-36 px-6 lg:px-4 max-w-[750px]">
         <div className="hero__title">
            Find, book, and hire vehicle in 
-           <span className="text-[#3083FF] w-[100px] sm:w-[150px] pl-2 inline-block flex-col justify-center items-center">
-              <p> Easy </p>
+           <p className="text-[#3083FF] w-[120px] sm:w-[160px] xl:w-[180px] pl-2 inline-block flex-col justify-center items-center">
+              <span>Easy</span>
              <Image
                src="/Rectangle 16.png"
                alt="logo"
@@ -21,13 +21,13 @@ const Hero = () => {
                height={6.813}
                className="object-contain -mt-4"
               />
-           </span> steps.
+           </p> steps.
         </div>
 
         <p className="hero__subtitle">
            Streamline your vehicle hire experience with our effortless booking process.
         </p>
-        <div className="flex flex-wrap justify-start items-center gap-5 mt-2">
+        {/* <div className="flex flex-wrap justify-start items-center gap-5 mt-2">
                  <Image
                       src="/App Store.png"
                       alt="logo"
@@ -42,7 +42,7 @@ const Hero = () => {
                       height={44}
                       className="object-contain"
                     />
-                 </div>
+                 </div> */}
       </div>
       <div className="hero__image-container">
         <div className="hero__image">
@@ -56,7 +56,7 @@ const Hero = () => {
           showThumbs={false}
           dynamicHeight={true}>
           </Carousel> */}
-          <Image src="/hero.png" alt="hero" fill className="object-contain" />
+          <Image src="/hero.png"  alt="hero" fill className="object-contain" />
         </div>
 
         {/* <div className="hero__image-overlay" /> */}

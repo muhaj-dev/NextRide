@@ -7,7 +7,7 @@ const Footer = () => {
   const currentDate = new Date();
   return (
     <footer className="bg-[#1E242D] flex flex-col text-white  mt-5 border-t border-gray-100 relative">
-      <div className="bg-primary-blue text-center md:text-start max-width sm:h-[300px] mx-auto flex justify-center md:justify-between items-center rounded-2xl px-4 py-6 md:p-10 absolute left-0 right-0 -top-32 ">
+      {/* <div className="bg-primary-blue text-center md:text-start max-width sm:h-[300px] mx-auto flex justify-center md:justify-between items-center rounded-2xl px-4 py-6 md:p-10 absolute left-0 right-0 -top-32 ">
         <div className="w-[400px]">
           <h1 className="text-white 2xl:text-[40px] sm:text-[36px] text-[20px] font-extrabold">
             Download Nextride
@@ -44,8 +44,8 @@ const Footer = () => {
             className="object-contain pb-60"
           />
         </div>
-      </div>
-      <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10 mt-56">
+      </div> */}
+      <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10 mt-10">
         <div className="flex flex-col justify-start items-start gap-6">
           <Image
             src="/logo.svg"
