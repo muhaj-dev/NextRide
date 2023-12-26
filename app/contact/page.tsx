@@ -71,8 +71,8 @@ const ContactUs = () => {
           <p className=" mb-4 ">
             Fill up the form and get a response fro, our tean within 24 hours
           </p>
-          <p className="flex gap-3 items-center "><FaPhoneAlt /> +2347012328410</p>
-          <p className="flex gap-3 items-center my-4 "><MdEmail /> ibrahimsokenu@gmail.com</p>
+          <p className="flex gap-3 items-center "><FaPhoneAlt /> +234 809 574 3804</p>
+          <p className="flex gap-3 items-center my-4 "><MdEmail /> hello.nextride@gmail.com</p>
           <p className="flex gap-3 items-center  "><FaLocationDot /> Lagos, Nigeria</p>
           <div className="mt-5">
             <Link href='https://www.instagram.com/nextride.ng?igsh=OGQ5ZDc2ODk2ZA=='>
