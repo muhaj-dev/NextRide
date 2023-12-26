@@ -8,20 +8,20 @@ export default function page() {
   return (
     <div className="py-32 mb-40 max-width text-[1.1rem]">
       <p className="font-bold text-[2rem] text-center">ABOUT US</p>
-      <div className="flex gap-4  pt-12 items-start justify-center">
+      <div className="flex flex-wrap gap-4  pt-12 items-start justify-center">
         <div className="basis-[400px] text-center">
-          <div className="w-fit mx-auto pb-3 ">
+          {/* <div className="w-fit mx-auto pb-3 ">
             <MdIndeterminateCheckBox size={50} />
-          </div>
+          </div> */}
           Nextride stands as a technology-powered mobility company based in
           Nigeria, committed to delivering seamless transportation solutions for
           both individuals and businesses across diverse locations.
         </div>
 
         <div className="basis-[400px] text-center">
-          <div className="w-fit mx-auto pb-3 ">
+          {/* <div className="w-fit mx-auto pb-3 ">
             <FaCar size={50} />
-          </div>
+          </div> */}
           Our vehicle rental service ensures an extensive range of premium
           vehicles, encompassing luxurious cars and buses. These vehicles are
           available for discerning customers seeking rentals and for vehicle
@@ -30,9 +30,9 @@ export default function page() {
           other security-related offerings.
         </div>
         <div className="basis-[400px] text-center">
-          <div className="w-fit mx-auto pb-3 ">
+          {/* <div className="w-fit mx-auto pb-3 ">
             <VscWorkspaceTrusted size={50} />
-          </div>
+          </div> */}
           At Nextride, we pride ourselves on being trustworthy, reliable, safe,
           and affordable. Our dedicated team is ever-ready to offer assistance.
           Embark on a journey to discover the distinctive Nextride experience.

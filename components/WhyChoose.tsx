@@ -10,7 +10,7 @@ const WhyChoose = () => {
     <div className="bg-ash ">
       <div className="w-[95%] max-w-[1400px] mx-auto py-16">
         <div className="flex justify-center items-center flex-col gap-2 mb-8">
-          <p className="text-[22px] text-black font-light mt-5">Why choose us</p>
+          <p className="text-[22px] text-black font-light mt-5">Why choose us ?</p>
           <h1 className="block md:hidden 2xl:text-[32px] sm:text-[24px] text-[20px] font-extrabold">
             We offer the best experience<br/> with our hire deals
           </h1>

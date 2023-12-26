@@ -28,7 +28,6 @@ const ContactUs = () => {
 
   const redirect = () => {
     onClose();
-    // window.location.reload();
   };
   const sendEmail = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -65,18 +64,18 @@ const ContactUs = () => {
 
   return (
     <div className="pt-32">
-      <div className="flex justify-between items-start mb-52 w-[95%] mx-auto">
-        <div className="basis-[48%]">
+      <div className="flex justify-between flex-col lg:flex-row gap-5 items-start mb-52 w-[95%] mx-auto">
+        <div className="w-[100%] lg:w-[48%]">
           <p className="font-semibold text-4xl mb-5">Contact Us</p>
           <p className=" mb-4 ">
-            Fill up the form and get a response fro, our tean within 24 hours
+            Fill up the form and get a response from our tean within 24 hours
           </p>
           <p className="flex gap-3 items-center "><FaPhoneAlt /> +234 809 574 3804</p>
           <p className="flex gap-3 items-center my-4 "><MdEmail /> hello.nextride@gmail.com</p>
           <p className="flex gap-3 items-center  "><FaLocationDot /> Lagos, Nigeria</p>
           <div className="mt-5">
-            <Link href='https://www.instagram.com/nextride.ng?igsh=OGQ5ZDc2ODk2ZA=='>
-                <FaInstagram size={25}/>
+            <Link className="flex gap-3 items-center hover:text-primary-blue" href='https://www.instagram.com/nextride.ng?igsh=OGQ5ZDc2ODk2ZA=='>
+                <FaInstagram size={25}/> nextride.ng
             </Link>
 
           </div>
@@ -85,7 +84,7 @@ const ContactUs = () => {
         <form
           ref={formRef}
           onSubmit={sendEmail}
-          className="basis-[48%] py-7 px-5 border-2 rounded-3xl"
+          className="w-[100%] lg:w-[48%] py-7 px-5 border-2 rounded-3xl"
         >
           <div className="mb-4">
             <input
@@ -150,7 +149,7 @@ const ContactUs = () => {
             <ModalFooter className=" w-[100%] mx-auto mb-5">
               <button
                 className="bg-primary-blue w-full text-white font-bold text-xl py-4 rounded-2xl"
-                // onClick={redirect}
+                onClick={redirect}
               >
                 Done
               </button>
