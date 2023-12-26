@@ -1,11 +1,47 @@
 "use client";
 
 import Image from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import { Fade } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
 
 const Hero = () => {
+
+  const spanStyle = {
+    // padding: '20px',
+    background: '#efefef',
+    color: '#000000'
+  }
   
+  const divStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundSize: 'cover',
+    height: '600px',
+    // maxWidth: '500px',
+  }
+  
+  const slideImages = [
+    {
+      url: '/heroCar/2021_Toyota_Camry-removebg-preview.png',
+    },
+    {
+      url: '/heroCar/2021_Toyota_Coaster-removebg-preview.png',
+    },
+    {
+      url: '/heroCar/2022_Lexus-removebg-preview.png',
+    },
+    {
+      url: '/heroCar/2022_Range_Rover_Velar-removebg-preview.png',
+    },
+    {
+      url: '/heroCar/2022_Rolls_Royce_Cullinan-removebg-preview.png',
+    },
+    {
+      url: '/heroCar/2022_Toyota_Hiace-removebg-preview.png',
+    },
+    
+  ];
 
   return (
     <div className="hero">
@@ -23,6 +59,7 @@ const Hero = () => {
               />
            </p> steps.
         </div>
+      
 
         <p className="hero__subtitle">
            Streamline your vehicle hire experience with our effortless booking process.
@@ -46,17 +83,24 @@ const Hero = () => {
       </div>
       <div className="hero__image-container">
         <div className="hero__image">
-          {/* <Carousel 
-          autoPlay
-          infiniteLoop
-          autoFocus
-          showIndicators={false}
-          showStatus={false}
-          stopOnHover
-          showThumbs={false}
-          dynamicHeight={true}>
-          </Carousel> */}
-          <Image src="/hero.png"  alt="hero" fill className="object-contain" />
+        <div className="">
+        <Fade>
+         {slideImages.map((slideImage, index)=> (
+            <div key={index}>
+            <Image 
+              src={slideImage.url}  
+              alt="hero" 
+              width={600}
+              height={700}
+              
+              className="object-contain mt-24 mx-auto" 
+            />
+              {/* <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
+              </div> */}
+            </div>
+          ))} 
+        </Fade>
+      </div>
         </div>
 
         {/* <div className="hero__image-overlay" /> */}
