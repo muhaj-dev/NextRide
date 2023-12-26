@@ -71,7 +71,7 @@ const Navbar = () => {
           <Link href="#faq" className="text-black hover:text-primary-blue w-full transition-all font-bold">
           FAQ
           </Link>
-          <Link href="/" className="text-black hover:text-primary-blue w-full transition-all font-bold">
+          <Link href="/contact" className="text-black hover:text-primary-blue w-full transition-all font-bold">
           Contact Us
           </Link>
         </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
           <Link href="#faq" className="text-black hover:text-primary-blue font-bold">
           FAQ
           </Link>
-          <Link href="/" className="text-black hover:text-primary-blue font-bold">
+          <Link href="/contact" className="text-black hover:text-primary-blue font-bold">
           Contact Us
           </Link>
         

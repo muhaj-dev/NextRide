@@ -5,8 +5,8 @@ export const footerLinks = [
         // { title: "About", url: "/" },
         { title: "About Us", url: "/about" },
         { title: "Our Service", url: "#service" },
-        { title: "Contact us", url: "/" },
-        { title: "FAQ", url: "/" },
+        { title: "Contact us", url: "/contact" },
+        { title: "FAQ", url: "#faq" },
       ],
     },
     {
