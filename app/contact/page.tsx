@@ -68,7 +68,7 @@ const ContactUs = () => {
         <div className="w-[100%] lg:w-[48%]">
           <p className="font-semibold text-4xl mb-5">Contact Us</p>
           <p className=" mb-4 ">
-            Fill up the form and get a response from our tean within 24 hours
+            Fill up the form and get a response from our team within 24 hours
           </p>
           <p className="flex gap-3 items-center "><FaPhoneAlt /> +234 809 574 3804</p>
           <p className="flex gap-3 items-center my-4 "><MdEmail /> hello.nextride@gmail.com</p>
