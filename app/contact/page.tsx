@@ -19,16 +19,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-interface InfoContactProps {
-  formattedFormData: {
-    PickLocation: string;
-    DropOffLocation: string;
-    DropOffDate: Date | null;
-    PickUpDate: Date | null;
-  };
-}
 
-const ContactUs: React.FC<InfoContactProps> = () => {
+const ContactUs = () => {
   const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const formRef = useRef<HTMLFormElement | null>(null);
